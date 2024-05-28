@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopNest</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!--Header for logo and nav bar along with search, cart and signin option-->
+    <header>
+        <div class="top-bar">
+            <h1 class="logo">ShopNEST <i class="fa-solid fa-bag-shopping" style="color:#F45B69;"></i></h1>
+            <div class="search-container">
+                <form action="#" method="get">
+                    <input type="text" placeholder="Search for products..." name="search" required>
+                    <button type="submit"><i class="fa-solid fa-magnifying-glass"></i>Search</button>
+                </form>
+            </div>
+            <button class="cart-button"><i class="fa-solid fa-cart-shopping"></i></button> <!--cart-->
+            <button class="signup-button">SignUp</button> 
+        </div>
+        
+        <div class="nav-bar">
+            <nav >
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Shop</a></li>
+                    <li><a href="#">Categories</a></li>
+                    <li><a href="#">Best Seller</a></li>
+                    <li><a href="#">Today's Deal</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+        
+    </header>
+    <main>
+        <section>
+            <h2 class="product-name">boAt Rockerz 450</h2>
+            <!--Product-container for product image with different color varient and multiple image of the product-->
+            <div class="product-container">
+                <div class="product-img">
+                    <input type="checkbox" id="zoomCheck" style="display: none;">
+                    <label for="zoomCheck">
+                        <img src="https://m.media-amazon.com/images/I/315vj6oj-FL.AC_SX250.jpg" alt="boAt Rockerz 450" id="main-image">
+                    </label>
+                    
+                    <!--choices for product image and color handled by javascript-->
+                    <div class="choice">
+                        <div class="color-variant">
+                            <label><input type="radio" name="color" value="blue" onclick="changeColor('blue')"> Blue</label>
+                            <label><input type="radio" name="color" value="black" onclick="changeColor('black')"> Black</label>
+                            <label><input type="radio" name="color" value="white" onclick="changeColor('white')"> White</label>
+                        </div>
+                        <div class="image-gallery">
+                            <div class="thumbnails">
+                                <img class="thumb" src="https://m.media-amazon.com/images/I/51LYseQyugL._SY450_.jpg" alt="Black Image 1" onclick="changeImage('https://m.media-amazon.com/images/I/51LYseQyugL._SY450_.jpg')">
+                                <img class="thumb" src="https://m.media-amazon.com/images/I/71QDnQWrVNL._SY450_.jpg" alt="Black Image 2" onclick="changeImage('https://m.media-amazon.com/images/I/71QDnQWrVNL._SY450_.jpg')">
+                                <img class="thumb" src="https://m.media-amazon.com/images/I/61S2z5PwUqL._SY450_.jpg" alt="Black Image 3" onclick="changeImage('https://m.media-amazon.com/images/I/61S2z5PwUqL._SY450_.jpg')">
+                                <img class="thumb" src="https://m.media-amazon.com/images/I/315vj6oj-FL.AC_SX250.jpg" alt="Black Image 4" onclick="changeImage('https://m.media-amazon.com/images/I/315vj6oj-FL.AC_SX250.jpg')">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--all the details of the product-->
+                <div class="product-details">
+                    <div class="pre-view">
+                        <h3>boAt Rockerz 450 Bluetooth On Ear Headphones with Mic, Upto 15 Hours Playback, 40MM Drivers, Padded Ear Cushions, Integrated Controls and Dual Modes(Luscious Black)</h3>
+                        <h4>boAt</h4>
+                        <span>Rating: ⭐⭐⭐⭐ (250 reviews)</span>
+                    </div><br>
+                    <span class="price"><data style="color: red;">-50%   </data><strong>Rs. 1,999  </strong><del style="text-decoration: line-through;"><br> Rs. 3,999</del></span><br>
+                    
+                    
+                    <table class="spec-table">
+                        <tr>
+                            <td class="key">Brand: </td>
+                            <td class="value">boAt</td>
+                        </tr>
+                        <tr>
+                            <td class="key">Model name: </td>
+                            <td class="value">Rockerz 450</td>
+                        </tr>
+                        <tr>
+                            <td class="key">Colour: </td>
+                            <td class="value">Black,White,Blue</td>
+                        </tr>
+                        <tr>
+                            <td class="key">Form Factor: </td>
+                            <td class="value">On Ear</td>
+                        </tr>
+                        <tr>
+                            <td class="key">Connectivity Technology: </td>
+                            <td class="value">Wireless</td>
+                        </tr>
+                    </table>
+                    <div class="about-item">
+                        <h4>About the Item:</h4>
+                        <ul>
+                            <li>Playback- It provides a massive battery backup of upto 15 hours for a superior playback time. Charging Time : 3 Hours</li>
+                            <li>Drivers- Its 40mm dynamic drivers help pump out immersive HD audio all day long.</li>
+                            <li>Earcushions- It has been ergonomically designed and structured as an on-ear headphone to provide the best user experience with its comfortable padded earcushions and lightweight design</li>
+                            <li>Controls- You can control your music without hiccups using the easy access controls, communicate seamlessly using the built-in mic, access voice assistant and always stay in the zone</li>
+                            <li>Dual Modes- One can connect to boAt Rockerz 450 via not one but two modes, Bluetooth as well as AUX</li>
+                            <li>1 year warranty from the date of purchase</li>
+                        </ul>
+                    </div>  
+                </div>  
+            </div>
+        </section>
+        <!--Call to action button's like buy and add to cart-->
+        <div class="purchase">
+            <button class="btn buy">BUY</button>
+            <button class="btn add-to-cart">ADD TO CART</button>
+        </div>
+        
+    </main>
+    <script src="logic.js"></script>
+</body>
+</html>
