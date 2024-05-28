@@ -1,8 +1,9 @@
+/*logic for image and color change in main-image section */
 function changeColor(color){
-    const mainImage = document.getElementById('main-image');
-    const thumbnails = document.querySelector(".thumbnails");
+    const mainImage = document.getElementById('main-image');/*fetching main-image*/
+    const thumbnails = document.querySelector(".thumbnails");/*fetching the thumbnils like color and diff images related to the product*/
 
-    let images = [];
+    let images = [];/*matching with the users choice*/
     if(color === "blue"){
         images=[
             'https://m.media-amazon.com/images/I/61hmbsAzLpL._SY355_.jpg',
@@ -28,7 +29,7 @@ function changeColor(color){
             'https://m.media-amazon.com/images/I/610bnYBwzmL._SY355_.jpg'
         ]
     }
-
+    /*updating the image section as per user choice*/
     mainImage.src = images[3];
     while(thumbnails.firstChild){
         thumbnails.removeChild(thumbnails.firstChild);
@@ -43,7 +44,7 @@ function changeColor(color){
         thumbnails.appendChild(thumb);
     });
 }   
-
+/*main-image update when users select per image from choice*/
 function changeImage(img){
     const mainImage = document.getElementById('main-image');
     mainImage.src = img;
